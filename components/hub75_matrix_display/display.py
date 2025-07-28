@@ -105,7 +105,8 @@ async def to_code(config):
         cg.add_library("Adafruit BusIO", None)
         cg.add_library("adafruit/Adafruit GFX Library", None)
         cg.add_library(
-            "https://github.com/TillFleisch/ESP32-HUB75-MatrixPanel-DMA#optional_logging",
+            # "https://github.com/TillFleisch/ESP32-HUB75-MatrixPanel-DMA#optional_logging",
+            "https://github.com/mrcodetastic/ESP32-HUB75-MatrixPanel-DMA",
             None,
         )
 
