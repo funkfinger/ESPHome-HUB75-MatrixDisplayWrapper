@@ -62,25 +62,38 @@ namespace esphome
             switch (cfg.driver)
             {
             case HUB75_I2S_CFG::shift_driver::SHIFTREG:
-                ESP_LOGCONFIG(TAG, "  Driver: SHIFTREG");
+                ESP_LOGCONFIG(TAG, "  Shift Driver: SHIFTREG");
                 break;
             case HUB75_I2S_CFG::shift_driver::FM6124:
-                ESP_LOGCONFIG(TAG, "  Driver: FM6124");
+                ESP_LOGCONFIG(TAG, "  Shift Driver: FM6124");
                 break;
             case HUB75_I2S_CFG::shift_driver::FM6126A:
-                ESP_LOGCONFIG(TAG, "  Driver: FM6126A");
+                ESP_LOGCONFIG(TAG, "  Shift Driver: FM6126A");
                 break;
             case HUB75_I2S_CFG::shift_driver::ICN2038S:
-                ESP_LOGCONFIG(TAG, "  Driver: ICN2038S");
+                ESP_LOGCONFIG(TAG, "  Shift Driver: ICN2038S");
                 break;
             case HUB75_I2S_CFG::shift_driver::MBI5124:
-                ESP_LOGCONFIG(TAG, "  Driver: MBI5124");
+                ESP_LOGCONFIG(TAG, "  Shift Driver: MBI5124");
                 break;
-            case HUB75_I2S_CFG::shift_driver::SM5266P:
-                ESP_LOGCONFIG(TAG, "  Driver: SM5266P");
+            case HUB75_I2S_CFG::shift_driver::DP3246:
+                ESP_LOGCONFIG(TAG, "  Shift Driver: DP3246");
                 break;
-            case HUB75_I2S_CFG::shift_driver::DP3246_SM5368:
-                ESP_LOGCONFIG(TAG, "  Driver: DP3246_SM5368");
+            }
+
+            switch (cfg.line_decoder)
+            {
+            case HUB75_I2S_CFG::line_driver::TYPE138:
+                ESP_LOGCONFIG(TAG, "  Line Driver: TYPE138");
+                break;
+            case HUB75_I2S_CFG::line_driver::TYPE595:
+                ESP_LOGCONFIG(TAG, "  Line Driver: TYPE595/SM5368");
+                break;
+            case HUB75_I2S_CFG::line_driver::TYPE_DIRECT:
+                ESP_LOGCONFIG(TAG, "  Line Driver: TYPE_DIRECT");
+                break;
+            case HUB75_I2S_CFG::line_driver::SM5266P:
+                ESP_LOGCONFIG(TAG, "  Line Driver: SM5266P");
                 break;
             }
 
